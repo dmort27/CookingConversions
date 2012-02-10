@@ -29,4 +29,14 @@ $(document).ready(function() {
             $("#farenheit").val(roundNumber(2, celcius2farenheit(c)));
         }
     });
+
+    $("#volume1").keyup(function() {
+	var vol1 = parseFloat($("#volume1").val());
+	if (!isNaN(vol1)) {
+	    var vol1units = parseFloat($("#volume1units").val());
+	    console.log($("#volume1units").val());
+	    var vol2units = parseFloat($("#volume2units").val());
+	    $("#volume2").val((vol1 / vol1units) * vol2units);
+	}
+    });
 });
