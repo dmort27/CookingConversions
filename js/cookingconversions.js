@@ -33,10 +33,18 @@ $(document).ready(function() {
     $("#volume1").keyup(function() {
 	var vol1 = parseFloat($("#volume1").val());
 	if (!isNaN(vol1)) {
-	    var vol1units = parseFloat($("#volume1units").val());
-	    console.log($("#volume1units").val());
-	    var vol2units = parseFloat($("#volume2units").val());
-	    $("#volume2").val((vol1 / vol1units) * vol2units);
+	    var factor1 = parseFloat($("#volumeunits1").val());
+	    var factor2 = parseFloat($("#volumeunits2").val());
+	    $("#volume2").val(roundNumber(2, (vol1 / factor1) * factor2));
+	}
+    });
+
+    $("#volume2").keyup(function() {
+	var vol2 = parseFloat($("#volume2").val());
+	if (!isNaN(vol2)) {
+	    var factor1 = parseFloat($("#volumeunits1").val());
+	    var factor2 = parseFloat($("#volumeunits2").val());
+	    $("#volume1").val(roundNumber(2, (vol2 / factor2) * factor1));
 	}
     });
 });
