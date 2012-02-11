@@ -30,21 +30,58 @@ $(document).ready(function() {
         }
     });
 
+    var updateVolume = function(a,b) {
+	var volA = parseFloat($("#volume" + a).val());
+
+	if (!isNaN(volA)) {
+	    var factor1 = parseFloat($("#volumeunits" + a).val());
+	    var factor2 = parseFloat($("#volumeunits" + b).val());
+
+	    $("#volume" + b).val(roundNumber(2, (volA / factor1) * factor2));
+	}        
+    };
+    
     $("#volume1").keyup(function() {
-	var vol1 = parseFloat($("#volume1").val());
-	if (!isNaN(vol1)) {
-	    var factor1 = parseFloat($("#volumeunits1").val());
-	    var factor2 = parseFloat($("#volumeunits2").val());
-	    $("#volume2").val(roundNumber(2, (vol1 / factor1) * factor2));
-	}
+        updateVolume("1", "2");
     });
 
     $("#volume2").keyup(function() {
-	var vol2 = parseFloat($("#volume2").val());
-	if (!isNaN(vol2)) {
-	    var factor1 = parseFloat($("#volumeunits1").val());
-	    var factor2 = parseFloat($("#volumeunits2").val());
-	    $("#volume1").val(roundNumber(2, (vol2 / factor2) * factor1));
-	}
+        updateVolume("2", "1");
     });
+
+    $("#volumeunits1").change(function() {
+        updateVolume("2", "1");        
+    });
+
+    $("#volumeunits2").change(function() {
+        updateVolume("1", "2");        
+    });
+
+    var updateWeight = function(a,b) {
+	var volA = parseFloat($("#weight" + a).val());
+
+	if (!isNaN(volA)) {
+	    var factor1 = parseFloat($("#weightunits" + a).val());
+	    var factor2 = parseFloat($("#weightunits" + b).val());
+
+	    $("#weight" + b).val(roundNumber(2, (volA / factor1) * factor2));
+	}        
+    };
+
+    $("#weight1").keyup(function() {
+        updateWeight("1", "2");
+    });
+
+    $("#weight2").keyup(function() {
+        updateWeight("2", "1");
+    });
+
+    $("#weightunits1").change(function() {
+        updateWeight("2", "1");        
+    });
+
+    $("#weightunits2").change(function() {
+        updateWeight("1", "2");        
+    });
+
 });
