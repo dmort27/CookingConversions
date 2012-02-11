@@ -12,23 +12,31 @@ body {
     padding: 0;
 }
 #header h1 {
-    background-color: #ccc;
-    border-bottom: 1px solid #666;
-    color: #222;
-    display: block;
-    font-size: 20px;
-    font-weight: bold;
-    padding: 10px 0;
-    text-align: center;
-    text-decoration: none;
+   background-color: #ccc;
+   border-bottom: 1px solid #666;
+   color: #222;
+   display: block;
+   font-size: 20px;
+   font-weight: bold;
+   padding: 10px 0;
+   text-align: center;
+   text-decoration: none;
+   text-shadow: 0px 1px 0px #fff;
+   background-image: -webkit-gradient(linear, left top, left bottom, from(#ccc), to(#999));
 }
 
 #main {
    margin: 10px;
 }
 
+#main h2 {
+   padding: 6px 10px;;
+   font-size: 17px;
+   text-shadow: 0px 1px 0px #fff;
+}
+
 input { 
-   border: 1px solid gray;
+   border: 1px solid #999999;
    -webkit-border-radius: 5px; 
    -moz-border-radius: 5px; 
    border-radius: 5px;
