@@ -2,6 +2,8 @@
   <head>
     <title>Cooking Conversions</title>
     <meta name="viewport" content="user-scalable=no, width=device-width" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <link rel="apple-touch-icon" href="cookingcoversions_icon.png"/>
     <link rel="stylesheet" type="text/css" href="iphone.css" media="only screen and (max-width: 480px)" />
     <link rel="stylesheet" type="text/css" href="desktop.css" media="screen and (min-width: 481px)" />
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
@@ -14,60 +16,73 @@
     </div>
     <div id="main">
 
-      <h2>Temperature</h2>
+      <div id="temp">
+	<h2>Temperature</h2>
 
-      <input type="text" name="farenheit" id="farenheit"></input>
-      Farenheit = <br />
-      <input type="text" name="celcius" id="celcius"></input>
-      Celcius
-
-      <h2>Volume</h2>
+	<div class="controls">
+	  <input type="text" name="farenheit" id="farenheit"></input>
+	  Farenheit = <br />
+	  <input type="text" name="celcius" id="celcius"></input>
+	  Celcius
+	</div>
+      </div>
       
-      <input type="text" name="volume1" id="volume1"></input>
-      <select id="volumeunits1">
-	<option value="1">Liters</option>
-	<option value="10">Deciliters</option>
-	<option value="1000">Milliliters</option>
-	<option value="0.264172052">Gallons</option>
-	<option value="1.056688209">Quarts</option>
-	<option value="2.113376429">Pints</option>
-	<option value="4.2267528377">Cups</option>
-	<option value="67.628045405">Tablespoons</option>
-	<option value="202.88413621">Teapoons</option>
-	<option value="33.8140227">Fluid Ounces</option>
-      </select>
-      =<br >
-      <input type="text" name="volume2" id="volume2"></input>
-      <select id="volumeunits2">
-	<option value="1">Liters</option>
-	<option value="10">Deciliters</option>
-	<option value="1000">Milliliters</option>
-	<option value="0.264172052">Gallons</option>
-	<option value="1.056688209">Quarts</option>
-	<option value="2.113376429">Pints</option>
-	<option value="4.2267528377">Cups</option>
-	<option value="67.628045405">Tablespoons</option>
-	<option value="202.88413621">Teapoons</option>
-	<option value="33.8140227">Fluid Ounces</option>
-      </select>
+      <div id="vol">
+	<h2>Volume</h2>
       
-      <h2>Weight</h2>
 
-      <input type="text" name="weight1" id="weight1"></input>
-      <select id="weightunits1">
-	<option value="1">Kilograms</option>
-	<option value="1000">Grams</option>
-	<option value="2.20462262">Pounds</option>
-	<option value="35.2739619">Ounces</option>
-      </select>
-      =<br >
-      <input type="text" name="weight2" id="weight2"></input>
-      <select id="weightunits2">
-	<option value="1">Kilograms</option>
-	<option value="1000">Grams</option>
-	<option value="2.20462262">Pounds</option>
-	<option value="35.2739619">Ounces</option>
-      </select>
+	<div class="controls">
+	  <input type="text" name="volume1" id="volume1"></input>
+	  <select id="volumeunits1">
+	    <option value="1">Liters</option>
+	    <option value="10">Deciliters</option>
+	    <option value="1000">Milliliters</option>
+	    <option value="0.264172052">Gallons</option>
+	    <option value="1.056688209">Quarts</option>
+	    <option value="2.113376429">Pints</option>
+	    <option value="4.2267528377">Cups</option>
+	    <option value="67.628045405">Tablespoons</option>
+	    <option value="202.88413621">Teapoons</option>
+	    <option value="33.8140227">Fluid Ounces</option>
+	  </select>
+	  =<br >
+	  <input type="text" name="volume2" id="volume2"></input>
+	  <select id="volumeunits2">
+	    <option value="1">Liters</option>
+	    <option value="10">Deciliters</option>
+	    <option value="1000">Milliliters</option>
+	    <option value="0.264172052">Gallons</option>
+	    <option value="1.056688209">Quarts</option>
+	    <option value="2.113376429">Pints</option>
+	    <option value="4.2267528377">Cups</option>
+	    <option value="67.628045405">Tablespoons</option>
+	    <option value="202.88413621">Teapoons</option>
+	    <option value="33.8140227">Fluid Ounces</option>
+	  </select>
+	</div>
+      </div>
+      
+      <div id="weight">
+	<h2>Weight</h2>
+	
+	<div class="controls">
+	  <input type="text" name="weight1" id="weight1"></input>
+	  <select id="weightunits1">
+	    <option value="1">Kilograms</option>
+	    <option value="1000">Grams</option>
+	    <option value="2.20462262">Pounds</option>
+	    <option value="35.2739619">Ounces</option>
+	  </select>
+	  =<br >
+	  <input type="text" name="weight2" id="weight2"></input>
+	  <select id="weightunits2">
+	    <option value="1">Kilograms</option>
+	    <option value="1000">Grams</option>
+	    <option value="2.20462262">Pounds</option>
+	    <option value="35.2739619">Ounces</option>
+	  </select>
+	</div>
+      </div>
 
     </div>
   </body>

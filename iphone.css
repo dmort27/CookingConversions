@@ -2,15 +2,52 @@ body {
     background-color: #ddd; /* Background color */
     color: #222;            /* Foreground color used for text */
     font-family: Helvetica; 
-    font-size: 14px;
+   font-size: 16px;
     margin: 0;              /* Amount of negative space around the outside of the body */
     padding: 0;             /* Amount of negative space around the inside of the body */
+   background-image: -webkit-gradient(linear, left top, left bottom, from(#555), to(#111));
+}
+
+h2 {
+   margin: 10px 0px 0px 0px;
+   border: 1px solid #999999;
+   padding: 3px 10px;;
+   font-size: 17px;
+   text-shadow: 0px 1px 0px #fff;
+   background-image: -webkit-gradient(linear, left top, left bottom, from(#ccc), to(#999));
+   -webkit-border-top-left-radius: 8px;
+   -webkit-border-top-right-radius: 8px;
+}
+
+input { 
+   border: 1px solid #999999;
+   -webkit-border-radius: 5px; 
+   -moz-border-radius: 5px; 
+   font-size: 16px;
+   border-radius: 5px;
+   width: 50px;
+   height: 20px;
+}
+
+select {
+   font-size: 16px;
+   text-shadow: 0px 1px 0px #fff;
+}
+
+.controls {
+   padding: 10px;
+   text-shadow: 0px 1px 0px #fff;
+}
+
+#main {
+   margin: 10px;
 }
 
 #header h1 {
     margin: 0;
     padding: 0;
 }
+
 #header h1 {
    background-color: #ccc;
    border-bottom: 1px solid #666;
@@ -25,21 +62,9 @@ body {
    background-image: -webkit-gradient(linear, left top, left bottom, from(#ccc), to(#999));
 }
 
-#main {
-   margin: 10px;
-}
-
-#main h2 {
-   padding: 6px 10px;;
-   font-size: 17px;
+#main div {
+   background-color: #fff;
    text-shadow: 0px 1px 0px #fff;
+   -webkit-border-radius: 8px; 
 }
 
-input { 
-   border: 1px solid #999999;
-   -webkit-border-radius: 5px; 
-   -moz-border-radius: 5px; 
-   border-radius: 5px;
-   width: 50px;
-   height: 20px;
-}
